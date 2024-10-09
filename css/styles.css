@@ -1,0 +1,668 @@
+/* Variable----------------------------------------------------------- */
+:root {
+    --text-color: white;
+    --background-color: #050712;
+    --theme-color: #cea123;
+    --hover-color: white;
+    --white-color: white;
+    --boads-color: linear-gradient(45deg, rgb(11, 0, 0), rgb(1, 1, 18));
+    --bottom-color: white;
+    --mode-word: "Light";
+    --rotate: rotateZ(90deg);
+}
+
+
+.light-mode {
+    --text-color: black;
+    --background-color: white;
+    --hover-color: black;
+    --bottom-color: black;
+    --mode-word: "Dark";
+    --rotate: rotateZ(1080deg)
+}
+
+/* The css code for everythings-------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: var(--background-color);
+    transition: background-color 1s, color 3s;
+}
+
+/* The css code that effects Headings on other pages------------------- */
+
+.services_ {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10%;
+}
+
+.services_ h1 {
+    color: var(--theme-color);
+    margin: 20px;
+    border-bottom: 1px solid var(--theme-color);
+}
+
+.services_ p {
+    color: var(--text-color);
+}
+
+.services_1 {
+    margin: auto;
+}
+
+/* Hoved a (buttons) ------------------------------------------- */
+
+.container a:hover,
+#tiers a:hover,
+#softwares a:hover,
+.outro a:hover {
+    color: var(--text-color);
+    background-color: var(--theme-color);
+}
+
+/* The top NAVBAR--------------------------------------------------- */
+
+nav {
+    z-index: 21;
+    position: fixed;
+    cursor: pointer;
+    width: 100%;
+    background: transparent;
+}
+
+.topbar.scrolled {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--theme-color);
+    transition:  1s;
+}
+
+nav ul {
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 5px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--theme-color);
+    fill: var(--theme-color);
+    border-radius: 5px;
+    margin-inline: 5px;
+}
+
+.active {
+    border: 1px solid var(--theme-color);
+}
+
+nav a:hover {
+    background: var(--theme-color);
+    color: var(--hover-color);
+    fill: var(--hover-color);
+}
+
+nav ul:last-child li:first-child {
+    margin-right:auto;
+}
+
+.logo {
+    height: 80px;
+    transition: 3s;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 300px;;
+    z-index: 21;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: var(--theme-color);
+    border-left: 1px solid var(--theme-color);
+    border-radius: 5px;
+}
+
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+    color: var(--hover-color);
+    fill: var(--hover-color);
+}
+
+.side {
+    border-bottom: 1px solid var(--hover-color);
+    border-top: 1px solid var(--hover-color);
+    border-radius: 0;
+    color: black;
+}
+
+.sidebar a:hover {
+    background-color: var(--hover-color);
+    color: var(--theme-color);
+    fill: var(--theme-color);
+    display: block;
+}
+
+#exit svg {
+    width: 24px;
+}
+
+.dark-mode-toggle:first-child {
+    margin-right: 20px;
+}
+
+.dark-mode-toggle:first-child svg:hover {
+    fill: var(--theme-color);
+    transition: all 1s;
+}
+
+.navIcon button {
+    width: 24px;
+    border: 0;
+    border-radius: 45px;
+    padding: auto;
+    background: transparent;
+    margin: 10px;
+}
+
+.dark-mode-toggle svg {
+    width: 24px;
+    transform: var(--rotate);
+    transition: transform 3s;
+}
+
+.navIcon svg {
+    fill: var(--text-color);
+}
+
+.navIcon:first-child svg:hover {
+    fill: var(--background-color);
+}
+
+.last {
+    border-bottom: 1px solid var(--hover-color);
+}
+.drop svg {
+    width: 20px;
+    height: 20px;
+}
+
+.drop {
+    height: 33px;
+}
+
+.drop ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drop li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.drop a {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.drop-show:hover + .platform {
+    display: block;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* HEADING code and the rest of the code------------------------------------ */
+
+.home_ {
+    width: 100%;
+    background-size: contain;
+    background-position: top;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, var(--background-color)),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0)70%, var(--background-color)),
+    url(../image/image1.png);
+    padding: 10p 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    z-index: 2;
+    color: var(--theme-color);
+    margin-top: 42%;
+    max-width: 650px;
+    font-size: small;
+}
+
+.content h1 {
+    border-bottom: 1px solid var(--theme-color);
+}
+/* 1ST SECTION css code and others------------------------------------- */
+.section1 {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.section1 aside {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 500px;
+    margin: 100px auto;
+    border-radius: 3px;
+}
+
+.section1 aside:first-child {
+    background-image: var(--boads-color);
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+}
+
+section h1 {
+    padding: 15px;
+}
+
+.section1 p {
+    color: var(--white-color);
+    padding: 10px 50px;
+}
+
+.section1 .container a {
+    border: 1px solid var(--theme-color);
+    margin: 10px auto;
+    padding: 3px 40%;
+    text-decoration: none;
+    border-radius: 2px;
+    color: var(--theme-color);
+}
+
+.section1 aside:last-child {
+    color: var(--theme-color);
+}
+
+/* 2ND SECTION css code for website prices tiers------------------------- */
+
+#tiers {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 10px 0px 10px;
+    width: 99%;
+}
+
+#tiers h1 {
+    color: var(--theme-color);
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.tiers-p {
+    width: 60%;
+    margin: 20px 20%;
+    color: var(--text-color) !important;
+}
+/* Actaul tabs */
+
+#tiers article {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#tiers div {
+    border: 1px solid var(--theme-color);
+    border-radius: 5px;
+    min-height: 500px;
+    width: 90%;
+    background-image: var(--boads-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px auto;
+    transition: all ease-in-out 0.5s;
+}
+
+#tiers div:hover {
+    height: 550px;
+    width: 100%;
+    z-index: 2;
+    margin: auto;
+}
+
+#tiers h3 {
+    color: var(--theme-color);
+    width: 100%;
+    border-bottom: 1px solid var(--theme-color);
+    padding: 30px;
+}
+
+#tiers div article {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+}
+
+#tiers #currency {
+    color: var(--theme-color);
+    font-size: 30PX;
+}
+
+#tiers #price {
+    color: var(--white-color);
+    font-size: 30px;
+}
+
+#tiers #per {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    height: max-content;
+    padding-inline: 5px;
+}
+
+#tiers p {
+    letter-spacing: 0px;
+    color: var(--white-color);
+}
+
+#tiers a {
+    text-decoration: none;
+    border: 1px solid var(--theme-color);
+    margin: 5px auto 70px;
+    padding: 5px 30%;
+    border-radius: 4px;
+    color: var(--theme-color);
+}
+
+/* 3RD SECTION css code for software development----------------------- */
+
+#softwares {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border: 1px solid var(--theme-color);
+    background-image: var(--boads-color);
+    border-radius: 5px;
+    margin: 40px auto;
+    width: 95%;
+    height: auto;
+}
+
+#softwares div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+}
+
+#softwares img {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+#softwares h3 {
+    margin: 30px;
+    color: var(--theme-color);
+}
+
+
+#softwares p {
+    color: var(--white-color);
+    margin-inline: 30px;
+}
+
+.softwareButtons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.softwareButtons a {
+    border: 1px solid var(--theme-color);
+    text-decoration: none;
+    color: var(--theme-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-block: 5px;
+    
+}
+
+#softwares .page {
+    color: var(--theme-color);
+    border-radius: 4px;
+    border: 1px solid var(--theme-color);
+    text-decoration: none;
+    margin: auto;
+    padding: 2px 35%;
+}
+
+/* LAST SECTION css code for the outro of all the pages------------------------ */
+
+footer {
+    border-top: 1px solid var(--theme-color);
+    background-image: var(--boads-color);
+}
+
+footer article {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(300px, 1fr));
+    padding: 40px;
+}
+
+.outro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    border-right: 1px solid var(--theme-color);
+}
+
+/* The code which change the icon at the bottom */
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 30px;
+    background: transparent;
+    border: 0;
+    margin-inline: auto;
+}
+
+.card-side {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--boads-color);
+
+}
+
+.card-side.front {
+    background-image: url("../image/YAYIKO-LOGO.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotateY(0deg);
+    background-position: center;
+    z-index: 3;
+    transition: all 3s;
+}
+
+.card-side.back {
+    background-image: url(../image/RULZZI-studios-LOGO.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotateY(180deg);
+    background-position: center;
+    z-index: -1;
+    transition: all 1ms;
+}
+
+.card:hover .card-side.front {
+    transform: rotateY(180deg);
+    transition: all 1ms;
+    z-index: -1;
+}
+.card:hover .card-side.back {
+    transform: rotateY(360deg);
+    transition: all 3s;
+    z-index: 3;
+}
+
+/* The end of it */
+
+footer p {
+    text-align: center;
+    color: var(--theme-color);
+}
+
+footer .outro a {
+    text-decoration: none;
+    border: 1px solid var(--theme-color);
+    border-radius: 4px;
+    color: var(--theme-color);
+    padding: 5px 25%;
+}
+
+footer .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+footer h5 {
+    color: var(--theme-color);
+}
+
+footer span a {
+    display: flex;
+    flex-direction: column;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+/* LAST SECTION 2ND css code for the outro and links to social media platforms */
+footer section {
+    border-top: 1px solid var(--theme-color);
+    display: grid;
+    justify-content: end;
+    background-image: var(--background-color);
+}
+
+footer .social {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: auto;
+    padding: 5px;
+}
+
+.social div {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--theme-color);
+}
+
+.social span a {
+    color: var(--theme-color);
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 30px;
+    list-style: none;
+    padding: 10px;
+    margin-left: auto;
+}
+
+footer a {
+    border-radius: 4px;
+    padding: 5px;
+}
+footer ul a:hover {
+    border: 1px solid var(--theme-color);
+}
+
+footer svg {
+    width: 20px;
+    height: auto;
+    fill: var(--theme-color);
+}
+/* THE MEDIA QUERY SECTION-------------------------- */
+
+@media (max-width:800px) {
+    .HideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+    #softwares {
+        height: 100%;
+    }
+    
+    .outro {
+        border-bottom: 1px solid var(--theme-color);
+        border-right: 0;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+    
+}

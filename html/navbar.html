@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>peaces don't work</h1>
+    <h1>Send an Email</h1>
+    <button id="sendEmailButton">Send Email</button>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+(function() {
+    emailjs.init("7mEOQE498BRxo3Vz8"); // Replace with your actual EmailJS User ID
+})();
+
+// Function to send email via EmailJS
+
+// emailjs.sendForm(serviceID, templateID, templateParams, userID)
+
+function sendEmail() {
+    emailjs.sendForm("Yayiko221",
+     "template_1",
+      {
+        company: "Rulzzi studios",
+        name: "shelzzi",
+        lastname: "rulzzi",
+        email: "rshelzzistudios@example.com",  // Valid email format
+        phone: "0687113962",
+        contact_method: "email",
+        reason: "reason enough",
+        time_from: "12:30",
+        time_to: "13:34",
+        additional_info: "more than enough",
+        },
+    "7mEOQE498BRxo3Vz8")
+    .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+    }, function(error) {
+        console.log("FAILED...", error);
+    });
+}
+
+// function sendEmail() {
+//     emailjs.send("Yayiko221", "template_1", {
+//         company: "Rulzzi studios",
+//         name: "shelzzi",
+//         lastname: "rulzzi",
+//         email: "rshelzzistudios@example.com",  // Valid email format
+//         phone: "0687113962",
+//         contact_method: "email",
+//         reason: "reason enough",
+//         time_from: "12:30",
+//         time_to: "13:34",
+//         additional_info: "more than enough",
+//     })
+
+//     .then(function(response) {
+//         console.log("SUCCESS!", response.status, response.text);
+//     }, function(error) {
+//         console.log("FAILED...", error);
+//     });
+// }
+
+// Trigger the sendEmail function when a button is clicked
+document.getElementById('sendEmailButton').addEventListener('click', sendEmail);
+
+
+    </script>
+</body>
+</html>

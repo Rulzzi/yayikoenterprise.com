@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100%;
+}
+
+.workpage {
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-block: 600px;
+    color: #cea123;
+}
