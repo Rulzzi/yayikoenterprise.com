@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="device-width, initial-scale=1">
-    <link rel="icon" href="SiteLogo.png" type="image/png">
+    <link rel="icon" href="../SiteLogo.png" type="image/png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/packages.css">
@@ -14,7 +14,7 @@
     <nav id="navbar" class="topbar">
         <ul class="sidebar">
             <li class="first" onclick=HideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a onclick=HideSidebar() class="side" href="YAYIKO enterprise.html">Home</a></li>
+            <li><a onclick=HideSidebar() class="side" href="index.html">Home</a></li>
             <li><a onclick=HideSidebar() href="work.html">Work</a></li>
             <li><a onclick=HideSidebar() href="packages.html">Packages</a></li>
             <li><a onclick=HideSidebar() href="Softwares.html">Softwares</a></li>
@@ -44,7 +44,7 @@
         </ul>
         <ul>
             <li><img class="logo" src="YAYIKO-LOGO.png"></li>
-            <li class="HideOnMobile"><a class="active" href="YAYIKO enterprise.html">Home</a></li>
+            <li class="HideOnMobile"><a class="active" href="index.html">Home</a></li>
             <li class="HideOnMobile"><a href="work.html">Work</a></li>
             <li class="HideOnMobile"><a href="packages.html">Packages</a></li>
             <li class="HideOnMobile"><a href="Softwares.html">Softwares</a></li>
